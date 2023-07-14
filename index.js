@@ -21,5 +21,14 @@ app.use("/api/pacientes", pacienteRoutes);
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
+  console.log(
+    process.env.MONGO_URL,
+    process.env.JWT_SECRET,
+    process.env.EMAIL_USER,
+    process.env.EMAIL_HOST,
+    process.env.EMAIL_PORT,
+    process.env.EMAIL_PASS,
+    process.env.FRONT_URL
+  );
   console.log(`Ready server en ${PORT}`);
 });
